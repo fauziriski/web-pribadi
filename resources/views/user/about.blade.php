@@ -1,4 +1,5 @@
 @extends('user.layouts.app')
+@section('title', 'Fauzi Riski | About')
 @section('content')
     
 
@@ -150,9 +151,9 @@
             <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
                 src="client/images/portfolio/unila.png" style="height: 80px;" alt="client-logo"></a>
             <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-                src="client/images/clients-logo/client-logo-5.png" alt="client-logo"></a>
-            <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
                 src="client/images/portfolio/LOGO.png" style="height: 80px;" alt="client-logo"></a>
+            <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+                src="client/images/portfolio/R.png" style="height: 80px;" alt="client-logo"></a>
           </div>
         </div>
       </div>

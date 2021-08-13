@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController as Home;
+use App\Http\Controllers\Admin\BlogController as Blog;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,13 @@ use App\Http\Controllers\Admin\HomeController as Home;
 
 
 Route::get('/', [Home::class, 'index'])->name('home');
-Route::get('/blog', [Home::class, 'blog'])->name('blog');
-Route::get('/blog/create', [Home::class, 'create'])->name('blog.create');
-Route::post('/blog', [Home::class, 'store'])->name('blog.store');
+
+//blog
+Route::get('/blog', [Blog::class, 'index'])->name('blog');
+Route::get('/blog/create', [Blog::class, 'create'])->name('blog.create');
+Route::post('/blog', [Blog::class, 'store'])->name('blog.store');
+Route::get('/blog/{blog}/edit', [Blog::class, 'edit'])->name('blog.edit');
+Route::post('/blog/update', [Blog::class, 'update'])->name('blog.update');
 
 Route::get('/test', function() {
     return view('admin.test');

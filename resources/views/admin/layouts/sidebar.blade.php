@@ -1,7 +1,7 @@
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            <a href="index.html">Fauzi Riski</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="/web-admin">St</a>

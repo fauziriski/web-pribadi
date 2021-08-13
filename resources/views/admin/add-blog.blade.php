@@ -1,6 +1,9 @@
 @extends('admin.layouts.app')
+@section('title')
+<title>Add Blog &mdash; Fauzi Riski</title>
+@endsection
 @section('content')
-
+General Dashboard &mdash; Stisla
 <!-- Main Content -->
 <div class="main-content">
     <section class="section">
@@ -98,47 +101,20 @@
 
 @section('js')
 
- {{-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> --}}
-{{-- <script>
-    
-    $(document).ready(function () {
-        // var offset = target.position().top + parent.scrollTop();
-        // alert($('#summernote').offset());
-        var nav = $('#summernote');
-        if(nav.length) {
-            nav.summernote({
-            placeholder: 'Hello stand alone ui',
-            tabsize: 2,
-            height: 400,
-            prettifyHtml: false,
-            toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'underline', 'clear']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['table', ['table']],
-                ['insert', ['link', 'picture', 'video']],
-                ['view', ['fullscreen', 'codeview', 'help']],
-                ['highlight', ['highlight']],
-                ['insert', ['nugget']],
-            ],
-            // nugget: {
-            //     list: [ // list of your nuggets
-            //         '[[code nugget 1]]',
-            //         '[[code nugget 2]]',
-            //         '[[code nugget 2]]'
-            //     ]
-            // },
-        });
-    }
-    });
-
-</script> --}}
+<link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/jquery-selectric/selectric.css">
 <link href="{{ asset('ckeditor/plugins/codesnippet/lib/highlight/styles/default.css') }}" rel="stylesheet">
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://demo.getstisla.com/assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+<script src="https://demo.getstisla.com/assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+<script src="https://demo.getstisla.com/assets/modules/upload-preview/assets/js/jquery.uploadPreview.min.js"></script>
+
+<script src="https://demo.getstisla.com/assets/js/page/features-post-create.js"></script>
 <script src="{{ asset('ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js') }}"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+
 <script>
    var konten = document.getElementById("konten");
      CKEDITOR.replace(konten,{
@@ -147,4 +123,5 @@
    });
    CKEDITOR.config.allowedContent = true;
 </script>
+
 @endsection

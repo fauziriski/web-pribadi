@@ -1,4 +1,5 @@
 @extends('user.layouts.app')
+@section('title', 'Fauzi Riski | Portfolio')
 @section('content')
 
 <!-- hero area -->
@@ -279,45 +280,21 @@
         <div class="col-12 text-center">
           <h2 class="section-title">Blogs</h2>
         </div>
+        @foreach ($post as $data)
         <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
           <article class="card shadow">
-            <img class="rounded card-img-top" src="client/images/blog/post-3.jpg" alt="post-thumb">
+            <img class="rounded card-img-top" src="{{ asset('storage/uploads/blog/'. $data->thumbnail) }}" width="330" height="240.16" alt="post-thumb">
             <div class="card-body">
-              <h4 class="card-title"><a class="text-dark" href="/blog-single">Amazon increase income 1.5 Million</a>
+              <h4 class="card-title"><a class="text-dark" href="/blog-single/{{ $data->slug }}">{{ $data->title }}</a>
               </h4>
-              <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              {{-- <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                 incididunt ut labore et
-                dolore magna aliqua.</p>
-              <a href="/blog-single" class="btn btn-xs btn-primary">Read More</a>
+                dolore magna aliqua.</p> --}}
+              <a href="/blog-single/{{ $data->slug }}" class="btn btn-xs btn-primary">Read More</a>
             </div>
           </article>
         </div>
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <article class="card shadow">
-            <img class="rounded card-img-top" src="client/images/blog/post-4.jpg" alt="post-thumb">
-            <div class="card-body">
-              <h4 class="card-title"><a class="text-dark" href="/blog-single">Amazon increase income 1.5 Million</a>
-              </h4>
-              <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et
-                dolore magna aliqua.</p>
-              <a href="/blog-single" class="btn btn-xs btn-primary">Read More</a>
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <article class="card shadow">
-            <img class="rounded card-img-top" src="client/images/blog/post-2.jpg" alt="post-thumb">
-            <div class="card-body">
-              <h4 class="card-title"><a class="text-dark" href="/blog-single">Amazon increase income 1.5 Million</a>
-              </h4>
-              <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et
-                dolore magna aliqua.</p>
-              <a href="/blog-single" class="btn btn-xs btn-primary">Read More</a>
-            </div>
-          </article>
-        </div>
+        @endforeach
       </div>
       
     </div>

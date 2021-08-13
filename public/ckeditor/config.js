@@ -23,12 +23,14 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
 		{ name: 'styles' },
 		{ name: 'colors' },
+		// { name: 'extra', groups: ['codeSnippet']},
 		{ name: 'about' }
+		
 	];
 
 	// Remove some buttons provided by the standard plugins, which are
 	// not needed in the Standard(s) toolbar.
-	config.removeButtons = 'Underline,Subscript,Superscript';
+	// config.removeButtons = 'Underline,Subscript,Superscript';
 
 	// Set the most common block elements.
 	config.format_tags = 'p;h1;h2;h3;pre';
@@ -36,10 +38,17 @@ CKEDITOR.editorConfig = function( config ) {
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
 
+	config.colorButton_renderContentColors = false;
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
-	config.extraPlugins = "lineutils,widget,codesnippet";
-
+	config.extraPlugins = "lineutils,language,widget,colorbutton,codesnippet,panelbutton,textmatch,emoji,autocomplete,textwatcher";
+	config.colorButton_enableAutomatic = false;
+	// config.extraPlugins = 'tableresize';
+	// config.extraPlugins = 'emoji';
 	config.codeSnippet_theme = 'monokai_sublime';
+	
+
+
+	
 };

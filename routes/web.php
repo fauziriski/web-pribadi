@@ -24,6 +24,6 @@ Route::get('/about', [Home::class, 'about'])->name('about');
 
 Route::get('/blog', [Home::class, 'blog'])->name('blog');
 
-Route::get('/blog-single', [Home::class, 'blog_single'])->name('about-single');
+Route::get('/blog-single/{slug}', [Home::class, 'blog_single'])->name('about-single');
 
 

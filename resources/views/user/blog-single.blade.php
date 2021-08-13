@@ -1,4 +1,5 @@
 @extends('user.layouts.app')
+@section('title', 'Fauzi Riski | Blog Detail')
 @section('content')
 
 <!-- page title -->
@@ -11,13 +12,13 @@
       </div>
     </div>
     <!-- background shapes -->
-    <img src="client/images/illustrations/page-title.png" alt="illustrations" class="bg-shape-1 w-100">
-    <img src="client/images/illustrations/leaf-pink-round.png" alt="illustrations" class="bg-shape-2">
-    <img src="client/images/illustrations/dots-cyan.png" alt="illustrations" class="bg-shape-3">
-    <img src="client/images/illustrations/leaf-orange.png" alt="illustrations" class="bg-shape-4">
-    <img src="client/images/illustrations/leaf-yellow.png" alt="illustrations" class="bg-shape-5">
-    <img src="client/images/illustrations/dots-group-cyan.png" alt="illustrations" class="bg-shape-6">
-    <img src="client/images/illustrations/leaf-cyan-lg.png" alt="illustrations" class="bg-shape-7">
+    <img src="{{ asset('client/images/illustrations/page-title.png') }}" alt="illustrations" class="bg-shape-1 w-100">
+    <img src="{{ asset('client/images/illustrations/leaf-pink-round.png') }}" alt="illustrations" class="bg-shape-2">
+    <img src="{{ asset('client/images/illustrations/dots-cyan.png') }}" alt="illustrations" class="bg-shape-3">
+    <img src="{{ asset('client/images/illustrations/leaf-orange.png') }}" alt="illustrations" class="bg-shape-4">
+    <img src="{{ asset('client/images/illustrations/leaf-yellow.png') }}" alt="illustrations" class="bg-shape-5">
+    <img src="{{ asset('client/images/illustrations/dots-group-cyan.png') }}" alt="illustrations" class="bg-shape-6">
+    <img src="{{ asset('client/images/illustrations/leaf-cyan-lg.png') }}" alt="illustrations" class="bg-shape-7">
   </section>
   <!-- /page title -->
   
@@ -26,11 +27,21 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="font-tertiary mb-5">{{ $post->title }}</h3>
-          <p class="font-secondary">Published on {{ $post->updated_at }} by <span class="text-primary">{{ $post->category->category }}</span
-              class="text-primary"> on <span>{{ $post->tags }}</span></p>
+          <p class="font-secondary">Published on {{ $post->updated_at }} by 
+            <span class="text-primary">{{ $post->category->category }} 
+              on 
+              <br>
+              <span>
+                {{ $post->tags }}
+              </span>
+            </p>
           <div class="content">
-            <img src="{{ asset('storage/uploads/blog/'. $post->thumbnail) }}" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+            <div class="col-md-12">
+              <img src="{{ asset('storage/uploads/blog/'. $post->thumbnail) }}" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+            </div>
+            <div class="col-md-12">
             {!!$post->content!!}
+          </div>
           </div>
         </div>
       </div>

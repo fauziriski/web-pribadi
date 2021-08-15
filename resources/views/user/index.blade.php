@@ -241,7 +241,7 @@
             <img src="client/images/portfolio/LOGO.png" alt="portfolio-image" class="img-fluid rounded w-100">
             <div class="hover-overlay">
               <div class="hover-content">
-                <a class="btn btn-light btn-sm" href="project-single.html">view project</a>
+                <a class="btn btn-light btn-sm" href="https://icoffee.id/">view project</a>
               </div>
             </div>
           </div>
@@ -251,7 +251,7 @@
             <img src="client/images/portfolio/R.png" alt="portfolio-image" class="img-fluid rounded w-100">
             <div class="hover-overlay">
               <div class="hover-content">
-                <a class="btn btn-light btn-sm" href="project-single.html">view project</a>
+                <a class="btn btn-light btn-sm" href="https://polrestabandarlampung.com/">view project</a>
               </div>
             </div>
           </div>
@@ -261,7 +261,7 @@
             <img src="client/images/portfolio/my_doctor.png" alt="portfolio-image" class="img-fluid rounded w-100">
             <div class="hover-overlay">
               <div class="hover-content">
-                <a class="btn btn-light btn-sm" href="project-single.html">view project</a>
+                <a class="btn btn-light btn-sm" href="https://play.google.com/store/apps/details?id=com.fauziriski.mydoctor">view project</a>
               </div>
             </div>
           </div>

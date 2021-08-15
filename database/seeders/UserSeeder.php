@@ -31,7 +31,13 @@ class UserSeeder extends Seeder
 
         ]);
         
-        $user = DB::table('users')->where('id', 1)->first();
+        $user = User::create([
+            'name' => 'Admin',
+            'email' => 'admin@fauziriski.my.id',
+            'role' => 'admin',
+            'password' =>  bcrypt('fauzi123'),
+        ]);
+
         $user->assignRole('admin');
     }
 }
